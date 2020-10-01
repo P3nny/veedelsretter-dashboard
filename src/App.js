@@ -4,6 +4,22 @@ import Sidebar from "./components/Sidebar";
 import Main from "./components/Main";
 
 class App extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      locations: [],
+      searchField: "",
+    };
+  }
+
+  componentDidMount() {
+    const apiUrl = "https://takehomedata.dokku.railslabs.com/companies.json";
+    fetch(apiUrl)
+      .then((response) => response.json())
+      .then((data) => console.log("This is your data", data));
+  }
+
   render() {
     return (
       <div className="wrapper">
