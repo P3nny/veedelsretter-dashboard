@@ -1,12 +1,12 @@
 import React from "react";
+// import { sum } from "zebras";
 
 const GetAdminSums = (props) => {
   const { companies } = props;
-  if (!companies || companies.length === 0) return <p>No companies, sorry</p>;
 
+  if (!companies || companies.length === 0) return <p>No companies, sorry</p>;
   return (
-    <ul>
-      <h2 className="list-head">Veedelsretter</h2>
+    <p>
       {companies.map((company) => {
         return (
           <li key={company.id} className="list">
@@ -15,7 +15,7 @@ const GetAdminSums = (props) => {
           </li>
         );
       })}
-    </ul>
+    </p>
   );
 };
 

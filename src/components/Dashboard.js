@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 // import ChartistGraph from "react-chartist";
 import withListLoading from "./WithListLoading";
-// import getAdminSums from "./GetAdminSums";
+import getAdminSums from "./GetAdminSums";
 import List from "./List";
 
 const Dashboard = (props) => {
-  // const AdminSums = getAdminSums();
+  const AdminSums = getAdminSums();
   const ListLoading = withListLoading(List);
   const [appState, setAppState] = useState({
     loading: false,
