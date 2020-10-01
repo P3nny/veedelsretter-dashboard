@@ -1,8 +1,9 @@
 ToDo
 
-- [ ] fetch real data
+- [x] fetch real data
+- [x] display first data
+
 - [ ] add Number-Widget component
-- [ ] display first data
 - [ ] add dropdown component for locations
 - [ ] display real data for location on card
 - [ ] add charts for admin and location
