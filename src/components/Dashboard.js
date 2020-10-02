@@ -31,14 +31,10 @@ const Dashboard = (props) => {
           <div className="col-md-4">
             <div className="card ">
               <div className="card-header ">
-                <h4 className="card-title">Gesamt</h4>
-                <p className="card-category">Umsatz mit Gutscheinen und Soli</p>
-                <p className="big-number">
-                  <SumLoading
-                    isLoading={appState.loading}
-                    companies={appState.companies}
-                  />
-                </p>
+                <SumLoading
+                  isLoading={appState.loading}
+                  companies={appState.companies}
+                />
               </div>
               <div className="card-body ">
                 <hr />

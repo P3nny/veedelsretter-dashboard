@@ -4,7 +4,7 @@ ToDo
 - [x] display first data
 - [x] add Number-Widget component
 
-- [ ] display real data for admin sums
+- [x] display real data for admin sums
 - [ ] add charts for admin and location
 - [ ] add dropdown component for locations
 - [ ] display real data for location on card
@@ -13,10 +13,10 @@ ADMIN:
 Als Admin-Nutzer möchte ich mir schnell einen Überblick über wichtige
 allgemeine Kennzahlen der Plattform verschaffen können.
 
+- [ ] Summe aller Spenden
 - [ ] Letzte Anmeldung einer location
 - [ ] Summe aller verkauften Gutscheine
 - [ ] Summe aller eingelösten Gutscheine
-- [ ] Summe aller Spenden
 
 - [ ] Barchart (Umsatz nach Monaten) / Heatmap
 - [ ] Wie viele Locations sind dabei? (Karte: Wo sind die locations?)
