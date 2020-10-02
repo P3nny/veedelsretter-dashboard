@@ -3,10 +3,12 @@ import React, { useState, useEffect } from "react";
 import withListLoading from "./WithListLoading";
 // import getAdminSums from "./GetAdminSums";
 import List from "./List";
+import AdminSum from "./AdminSums";
 
 const Dashboard = (props) => {
-  const AdminSums = getAdminSums();
+  const SumLoading = withListLoading(AdminSum);
   const ListLoading = withListLoading(List);
+
   const [appState, setAppState] = useState({
     loading: false,
     companies: null,
@@ -29,9 +31,14 @@ const Dashboard = (props) => {
           <div className="col-md-4">
             <div className="card ">
               <div className="card-header ">
-                <h4 className="card-title">Verkaufte Gutscheine</h4>
-                <p className="card-category">Gesamtanzahl</p>
-                <p className="big-number">42</p>
+                <h4 className="card-title">Gesamt</h4>
+                <p className="card-category">Umsatz mit Gutscheinen und Soli</p>
+                <p className="big-number">
+                  <SumLoading
+                    isLoading={appState.loading}
+                    companies={appState.companies}
+                  />
+                </p>
               </div>
               <div className="card-body ">
                 <hr />

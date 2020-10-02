@@ -2,11 +2,12 @@ ToDo
 
 - [x] fetch real data
 - [x] display first data
+- [x] add Number-Widget component
 
-- [ ] add Number-Widget component
+- [ ] display real data for admin sums
+- [ ] add charts for admin and location
 - [ ] add dropdown component for locations
 - [ ] display real data for location on card
-- [ ] add charts for admin and location
 
 ADMIN:
 Als Admin-Nutzer möchte ich mir schnell einen Überblick über wichtige
