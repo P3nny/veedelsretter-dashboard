@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 // import ChartistGraph from "react-chartist";
 import withListLoading from "./WithListLoading";
-// import getAdminSums from "./GetAdminSums";
 import List from "./List";
 import AdminSum from "./AdminSums";
+import AdminLocations from "./AdminLocations";
 
 const Dashboard = (props) => {
   const SumLoading = withListLoading(AdminSum);
+  const LocationLoading = withListLoading(AdminLocations);
   const ListLoading = withListLoading(List);
 
   const [appState, setAppState] = useState({
@@ -30,18 +31,16 @@ const Dashboard = (props) => {
         <div className="row">
           <div className="col-md-4">
             <div className="card ">
-              <div className="card-header ">
-                <SumLoading
-                  isLoading={appState.loading}
-                  companies={appState.companies}
-                />
-              </div>
-              <div className="card-body ">
-                <hr />
-                <div className="stats">
-                  <i className="fa fa-history"></i> Updated 3 minutes ago
-                </div>
-              </div>
+              <SumLoading
+                isLoading={appState.loading}
+                companies={appState.companies}
+              />
+            </div>
+            <div className="card ">
+              <LocationLoading
+                isLoading={appState.loading}
+                companies={appState.companies}
+              />
             </div>
           </div>
           <div className="col-md-8">

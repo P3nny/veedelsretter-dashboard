@@ -13,10 +13,15 @@ ADMIN:
 Als Admin-Nutzer möchte ich mir schnell einen Überblick über wichtige
 allgemeine Kennzahlen der Plattform verschaffen können.
 
-- [ ] Summe aller Spenden
+- [x] Summe Gutscheine
+- [x] Summe Spenden
+
+- [ ] Gesamtzahl der locations
 - [ ] Letzte Anmeldung einer location
-- [ ] Summe aller verkauften Gutscheine
-- [ ] Summe aller eingelösten Gutscheine
+
+- [ ] Anzahl verkaufte Gutscheine
+- [ ] Anzahl eingelöste Gutscheine
+- [ ] Quote
 
 - [ ] Barchart (Umsatz nach Monaten) / Heatmap
 - [ ] Wie viele Locations sind dabei? (Karte: Wo sind die locations?)
