@@ -5,9 +5,9 @@ ToDo
 - [x] add Number-Widget component
 - [x] display real data for admin sums
 
-- [ ] add dropdown component for locations
-
-- [ ] display real data for location on card
+- [x] add dropdown component for locations
+- [x] display first data for hard coded location on card
+- [ ] connect target from dropdown with location card
 - [ ] add charts for admin and location
 
 ADMIN:
