@@ -6,7 +6,7 @@ ToDo
 - [x] display real data for admin sums
 - [x] add dropdown component for locations
 - [x] display first data for hard coded location on card
-- [ ] connect target from dropdown with location card
+- [x] connect target from dropdown with location card
 - [ ] add charts for admin and location
 
 ADMIN:
