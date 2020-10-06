@@ -1,14 +1,23 @@
 import React, { useState, useEffect } from "react";
-// import ChartistGraph from "react-chartist";
 import withListLoading from "./WithListLoading";
-import List from "./List";
 import AdminSum from "./AdminSums";
 import AdminLocations from "./AdminLocations";
+import AdminCounts from "./AdminCounts";
+
+import Calendar from "./charts/calendar";
+import data from "../data/data.json";
+
+import ChartistGraph from "react-chartist";
+
+let dataPie = {
+  labels: ["Geschäft", "Kneipe", "Restaurant"],
+  series: [127388.86, 124795.75, 303754.21],
+};
 
 const Dashboard = (props) => {
   const SumLoading = withListLoading(AdminSum);
   const LocationLoading = withListLoading(AdminLocations);
-  const ListLoading = withListLoading(List);
+  const CountLoading = withListLoading(AdminCounts);
 
   const [appState, setAppState] = useState({
     loading: false,
@@ -42,33 +51,30 @@ const Dashboard = (props) => {
                 companies={appState.companies}
               />
             </div>
+            <div className="card ">
+              <CountLoading
+                isLoading={appState.loading}
+                companies={appState.companies}
+              />
+            </div>
           </div>
           <div className="col-md-8">
             <div className="card">
               <div className="card-header ">
-                <h4 className="card-title">Users Behavior</h4>
-                <p className="card-category">24 Hours performance</p>
+                <h4 className="card-title">Wo gab es den meisten Umsatz?</h4>
+                <p className="card-category">
+                  Summe Gutscheine und Soli nach Typ
+                </p>
               </div>
-              <div className="card-body "></div>
-              <div className="card-footer ">
-                <div className="legend">
-                  <i className="fa fa-circle text-info"></i> Open
-                  <i className="fa fa-circle text-danger"></i> Click
-                  <i className="fa fa-circle text-warning"></i> Click Second
-                  Time
+              <div className="card-body">
+                <ChartistGraph data={dataPie} type="Pie" />
+                <div className="calendar">
+                  <Calendar data={data} height="200px" />
                 </div>
-                <hr />
-                <div className="stats">
-                  <i className="fa fa-history"></i> Updated 3 minutes ago
-                </div>
-                <div className="container">
-                  <p>
-                    <ListLoading
-                      isLoading={appState.loading}
-                      companies={appState.companies}
-                    />
-                  </p>
-                </div>
+              </div>
+              <hr />
+              <div className="stats">
+                <i className="fa fa-history"></i> Updated 3 minutes ago
               </div>
             </div>
           </div>

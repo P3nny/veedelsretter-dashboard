@@ -4,7 +4,6 @@ ToDo
 - [x] display first data
 - [x] add Number-Widget component
 - [x] display real data for admin sums
-
 - [x] add dropdown component for locations
 - [x] display first data for hard coded location on card
 - [ ] connect target from dropdown with location card
@@ -17,10 +16,10 @@ allgemeine Kennzahlen der Plattform verschaffen können.
 - [x] Summe Gutscheine
 - [x] Summe Spenden
 - [x] Gesamtzahl der locations
-- [x ] Letzte Anmeldung einer location
+- [x] Letzte Anmeldung einer location
 
-- [ ] Anzahl verkaufte Gutscheine
-- [ ] Anzahl eingelöste Gutscheine
+- [x] Anzahl verkaufte Gutscheine
+- [x] Anzahl eingelöste Gutscheine
 - [ ] Quote
 
 - [ ] Barchart (Umsatz nach Monaten) / Heatmap
@@ -32,7 +31,7 @@ Kennzahlen einzelner Einzelhändler verschaffen können.
 
 Dropdown
 
-- [ ] Kann gezielt Einzelhändler auswählen
+- [x] Kann gezielt Einzelhändler auswählen
 
 Card
 

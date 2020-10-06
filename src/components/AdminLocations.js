@@ -11,32 +11,22 @@ const AdminLocations = (props) => {
   );
   lastCompany = lastCompany.toLocaleDateString();
 
-  console.log(lastCompany);
-
   return (
     <div>
       <div className="card-header ">
         <h4 className="card-title">Wie viele sind dabei?</h4>
-        <p className="card-category">Anzahl Firmen</p>
       </div>
-
       <div className="card-body ">
+        <p className="card-category">Anzahl Firmen</p>
         <div className="stats">
           <p className="big-number">{companiesCount}</p>
         </div>
+        <p className="card-category">Letzte Anmeldung</p>
       </div>
-
-      <div className="card-header ">
-        <h4 className="card-title">Letzte Anmeldung</h4>
-        <p className="card-category">Neu dabei seit</p>
+      <div className="stats">
+        <p className="big-number">{lastCompany}</p>
       </div>
-
-      <div className="card-body ">
-        <div className="stats">
-          <p className="big-number">{lastCompany}</p>
-        </div>
-        <i className="fa fa-history"></i> Updated 3 minutes ago
-      </div>
+      <i className="fa fa-history"></i> Updated 3 minutes ago
     </div>
   );
 };
