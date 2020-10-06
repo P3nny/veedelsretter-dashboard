@@ -3,12 +3,9 @@ import useInputState from "./hooks/UseInputState";
 
 export default function CompanyProfile(props) {
   const { companies } = props;
-  const [selectedCompany] = useInputState("Heiser OHG");
+  const [selectedCompany, updateSelectedCompany] = useInputState("Heiser OHG");
 
   if (!companies || companies.length === 0) return <p>No companies, sorry</p>;
-
-  let company = companies.filter((company) => company.name === selectedCompany);
-  company = company[0];
 
   return (
     <div className="content">

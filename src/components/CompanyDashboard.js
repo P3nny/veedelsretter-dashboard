@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import GetCompany from "./GetCompany";
-import CompanyProfile from "./CompanyProfile";
+// import CompanyProfile from "./CompanyProfile";
 
 const CompanyDashboard = () => {
   const [appState, setAppState] = useState({
@@ -30,19 +30,6 @@ const CompanyDashboard = () => {
                 isLoading={appState.loading}
                 companies={appState.companies}
               />
-            </div>
-          </div>
-          <div className="col-md-8">
-            <div className="card"></div>
-            <div className="card-body ">
-              <CompanyProfile
-                isLoading={appState.loading}
-                companies={appState.companies}
-              />
-            </div>
-            <hr />
-            <div className="stats">
-              <i className="fa fa-history"></i> Updated 3 minutes ago
             </div>
           </div>
         </div>
