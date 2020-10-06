@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import UseInputState from "./UseInputState";
+import React from "react";
+import UseInputState from "./hooks/UseInputState";
 
 const GetCompany = (props) => {
   const { companies } = props;
-  const [selectedCompany, setSelectedCompany] = useState("Heiser OHG");
+  const [selectedCompany, updateSelectedCompany] = UseInputState("Heiser OHG");
 
   if (!companies || companies.length === 0) return <p>No companies, sorry</p>;
 
@@ -15,17 +15,10 @@ const GetCompany = (props) => {
       </div>
       <div className="card-body ">
         <h3>Ausgewählt: {selectedCompany}</h3>
-        <select
-          value={selectedCompany}
-          onChange={(e) => setSelectedCompany(e.target.value)}
-        >
+        <select value={selectedCompany} onChange={updateSelectedCompany}>
           {companies.map((company) => {
             return (
-              <option
-                key={company.name}
-                value={company.name}
-                onChange={UseInputState}
-              >
+              <option value={company.name} onChange={UseInputState}>
                 {company.name}
               </option>
             );

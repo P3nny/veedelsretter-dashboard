@@ -1,14 +1,13 @@
 import React from "react";
+import useInputState from "./hooks/UseInputState";
 
-const CompanyProfile = (props) => {
+export default function CompanyProfile(props) {
   const { companies } = props;
+  const [selectedCompany] = useInputState("Heiser OHG");
   if (!companies || companies.length === 0) return <p>No companies, sorry</p>;
 
-  let filteredCompany = companies.filter(
-    (company) => company.name === "Heiser OHG"
-  );
-
-  let company = filteredCompany[0];
+  let company = companies.filter((company) => company.name === selectedCompany);
+  company = company[0];
 
   return (
     <div className="content">
@@ -39,6 +38,19 @@ const CompanyProfile = (props) => {
       </div>
     </div>
   );
-};
+}
+
+/* const CompanyProfile = (props) => {
+  const { companies } = props;
+  if (!companies || companies.length === 0) return <p>No companies, sorry</p>;
+
+  let filteredCompany = companies.filter(
+    (company) => company.name === "Heiser OHG"
+  );
+
+  let company = filteredCompany[0];
+
+
 
 export default CompanyProfile;
+*/
