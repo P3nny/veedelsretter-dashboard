@@ -3,6 +3,7 @@ import UseInputState from "./hooks/UseInputState";
 
 const GetCompany = (props) => {
   const { companies } = props;
+
   const [selectedCompany, updateSelectedCompany] = UseInputState("Heiser OHG");
 
   if (!companies || companies.length === 0) return <p>No companies, sorry</p>;
@@ -40,19 +41,22 @@ const GetCompany = (props) => {
             </div>
             <div className="col-md-8">
               <div className="card-body">
-                <p className="">
-                  Verkaufte Gutscheine: {company.voucher_count}
+                <p>Verkaufte Gutscheine: {company.voucher_count}</p>
+                <p>Eingelöste Gutscheine: {company.redeemed_voucher_count}</p>
+                <p>
+                  Prozent eingelöst:{" "}
+                  {Math.round(
+                    (company.redeemed_voucher_count / company.voucher_count) *
+                      100
+                  )}
+                  %
                 </p>
-                <p className="">
-                  Eingelöste Gutscheine: {company.redeemed_voucher_count}
-                </p>
-                <p className="">Bestellungen: {company.orders_count}</p>
-                <p className="">
+
+                <p>Bestellungen: {company.orders_count}</p>
+                <p>
                   Umsatz insgesamt: {(company.amount / 100).toLocaleString()} €
                 </p>
-                <p className="">
-                  Davon Soli: {(company.soli / 100).toLocaleString()} €
-                </p>
+                <p>Davon Soli: {(company.soli / 100).toLocaleString()} €</p>
               </div>
             </div>
           </div>
