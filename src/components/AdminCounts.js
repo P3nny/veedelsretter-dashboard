@@ -23,7 +23,7 @@ const AdminCounts = (props) => {
   return (
     <div>
       <div className="card-header ">
-        <h4 className="card-title">Voucher</h4>
+        <h4 className="card-title">Übersicht Voucher</h4>
       </div>
 
       <div className="card-body ">
@@ -39,7 +39,6 @@ const AdminCounts = (props) => {
         <div className="stats">
           <p className="big-number">{voucherPercentage} %</p>
         </div>
-        <i className="fa fa-history"></i> Updated 3 minutes ago
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import useInputState from "./hooks/UseInputState";
+import useInputState from "../hooks/UseInputState";
 
 export default function CompanyProfile(props) {
   const { companies } = props;
