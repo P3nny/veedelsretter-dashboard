@@ -1,3 +1,8 @@
+Open tasks
+
+- [ ] refactor double api call in Admin and location dashboard
+- [ ] sort dropdown list a-z
+
 ToDo
 
 - [x] fetch real data
@@ -7,9 +12,9 @@ ToDo
 - [x] add dropdown component for locations
 - [x] display first data for hard coded location on card
 - [x] connect target from dropdown with location card
-
-- [ ] add chart for admin
-- [ ] add chart for location
+- [x] add chart for admin
+- [x] add voucher_percentage in location
+- [x] add chart for location (Top 5 Amount, Top 5 Soli)
 
 ADMIN:
 Als Admin-Nutzer möchte ich mir schnell einen Überblick über wichtige
@@ -24,8 +29,8 @@ allgemeine Kennzahlen der Plattform verschaffen können.
 - [x] Anzahl eingelöste Gutscheine
 - [ ] Quote
 
-- [ ] Barchart (Umsatz nach Monaten) / Heatmap
-- [ ] Wie viele Locations sind dabei? (Karte: Wo sind die locations?)
+- [x] Barchart (Umsatz nach Monaten) / Heatmap
+- [x] Wie viele Locations sind dabei? (Karte: Wo sind die locations?)
 
 LOCATIONS:
 Als Admin-Nutzer möchte ich mir schnell einen Überblick über wichtige
