@@ -6,6 +6,7 @@ import AdminLocations from "./AdminLocations";
 import AdminCounts from "./AdminCounts";
 
 import PieChart from "./charts/pie";
+import BarChart from "./charts/bar";
 import Calendar from "./charts/calendar";
 
 const Dashboard = (props) => {
@@ -78,6 +79,19 @@ const Dashboard = (props) => {
               </div>
               <div className="card-body">
                 <PieChart />
+              </div>
+            </div>
+            <div className="card">
+              <div className="card-header ">
+                <h4 className="card-title">
+                  Was waren die erfolgreichsten Monate?
+                </h4>
+                <p className="card-category">
+                  Summe Gutscheine und Soli nach Monat
+                </p>
+              </div>
+              <div className="card-body">
+                <BarChart />
               </div>
             </div>
           </div>
