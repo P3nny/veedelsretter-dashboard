@@ -7,7 +7,9 @@ ToDo
 - [x] add dropdown component for locations
 - [x] display first data for hard coded location on card
 - [x] connect target from dropdown with location card
-- [ ] add charts for admin and location
+
+- [ ] add chart for admin
+- [ ] add chart for location
 
 ADMIN:
 Als Admin-Nutzer möchte ich mir schnell einen Überblick über wichtige

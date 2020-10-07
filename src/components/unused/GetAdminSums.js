@@ -1,21 +1,22 @@
 import React from "react";
+// import { sum } from "zebras";
 
-const List = (props) => {
+const GetAdminSums = (props) => {
   const { companies } = props;
+
   if (!companies || companies.length === 0) return <p>No companies, sorry</p>;
   return (
-    <ul>
-      <h2 className="list-head">Veedelsretter</h2>
+    <p>
       {companies.map((company) => {
         return (
           <li key={company.id} className="list">
-            <span className="company-name">{company.name} </span>
-            <span className="company-amount">{company.amount}</span>
+            <span className="company-text">{company.name} </span>
+            <span className="company-description">{company.amount}</span>
           </li>
         );
       })}
-    </ul>
+    </p>
   );
 };
 
-export default List;
+export default GetAdminSums;

@@ -6,6 +6,7 @@ import * as serviceWorker from "./serviceWorker";
 import "./assets/css/bootstrap.min.css";
 import "./assets/css/light-bootstrap-dashboard.css";
 import "./assets/css/dashboard.css";
+import "./assets/css/calendar.css";
 
 ReactDOM.render(
   <React.StrictMode>

@@ -25,7 +25,6 @@ const AdminSums = (props) => {
         <div className="stats">
           <p className="big-number">{soliSum} €</p>
         </div>
-        <i className="fa fa-history"></i> Updated 3 minutes ago
       </div>
     </div>
   );
