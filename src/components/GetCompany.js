@@ -1,15 +1,33 @@
-import React from "react";
-import UseInputState from "./hooks/UseInputState";
+import React, { useState } from "react";
+import Select from "react-select";
 
 const GetCompany = (props) => {
   const { companies } = props;
 
-  const [selectedCompany, updateSelectedCompany] = UseInputState("Heiser OHG");
+  const [selectedCompany, updateSelectedCompany] = useState("Heiser OHG");
 
   if (!companies || companies.length === 0) return <p>No companies, sorry</p>;
 
   let company = companies.filter((company) => company.name === selectedCompany);
   company = company[0];
+
+  const listOfCompanies = companies.map((company) => ({
+    label: company.name,
+    value: company.name,
+  }));
+
+  listOfCompanies.sort((a, b) => {
+    const nameA = a.label.toUpperCase(); // Groß-/Kleinschreibung ignorieren
+    const nameB = b.label.toUpperCase(); // Groß-/Kleinschreibung ignorieren
+    if (nameA < nameB) {
+      return -1;
+    }
+    if (nameA > nameB) {
+      return 1;
+    }
+
+    return 0;
+  });
 
   return (
     <div>
@@ -19,15 +37,11 @@ const GetCompany = (props) => {
           <p className="card-category">Wen suchst du?</p>
         </div>
         <div className="card-body ">
-          <select value={selectedCompany} onChange={updateSelectedCompany}>
-            {companies.map((company) => {
-              return (
-                <option value={company.name} onChange={UseInputState}>
-                  {company.name}
-                </option>
-              );
-            })}
-          </select>
+          <Select
+            options={listOfCompanies}
+            value={selectedCompany}
+            onChange={(opt) => updateSelectedCompany(opt.value)}
+          />
         </div>
       </div>
       <div className="content">

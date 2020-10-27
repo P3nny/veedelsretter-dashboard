@@ -1,6 +1,6 @@
 Open tasks
 
-- [ ] sort dropdown list a-z
+- [x] sort dropdown list a-z
 - [x] refactor double api call in Admin and location dashboard
 
 ToDo
