@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import withListLoading from "./WithListLoading";
 import AdminSum from "./AdminSums";
@@ -14,20 +14,7 @@ const Dashboard = (props) => {
   const LocationLoading = withListLoading(AdminLocations);
   const CountLoading = withListLoading(AdminCounts);
 
-  const [appState, setAppState] = useState({
-    loading: false,
-    companies: null,
-  });
-
-  useEffect(() => {
-    setAppState({ loading: true });
-    const apiUrl = `https://takehomedata.dokku.railslabs.com/companies.json`;
-    fetch(apiUrl)
-      .then((res) => res.json())
-      .then((companies) => {
-        setAppState({ loading: false, companies: companies });
-      });
-  }, [setAppState]);
+  const companyData = props.companyData;
 
   return (
     <div className="content">
@@ -36,20 +23,20 @@ const Dashboard = (props) => {
           <div className="col-md-4">
             <div className="card ">
               <SumLoading
-                isLoading={appState.loading}
-                companies={appState.companies}
+                isLoading={companyData.loading}
+                companies={companyData.companies}
               />
             </div>
             <div className="card ">
               <LocationLoading
-                isLoading={appState.loading}
-                companies={appState.companies}
+                isLoading={companyData.loading}
+                companies={companyData.companies}
               />
             </div>
             <div className="card ">
               <CountLoading
-                isLoading={appState.loading}
-                companies={appState.companies}
+                isLoading={companyData.loading}
+                companies={companyData.companies}
               />
             </div>
           </div>

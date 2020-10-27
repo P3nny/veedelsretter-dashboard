@@ -1,26 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import CompanyAmountBarChart from "./charts/CompanyAmountBar";
 import CompanySoliBarChart from "./charts/CompanySoliBar";
 
 import GetCompany from "./GetCompany";
-// import CompanyProfile from "./CompanyProfile";
 
-const CompanyDashboard = () => {
-  const [appState, setAppState] = useState({
-    loading: false,
-    companies: null,
-    selectedCompany: "Heiser OHG",
-  });
-
-  useEffect(() => {
-    setAppState({ loading: true });
-    const apiUrl = `https://takehomedata.dokku.railslabs.com/companies.json`;
-    fetch(apiUrl)
-      .then((res) => res.json())
-      .then((companies) => {
-        setAppState({ loading: false, companies: companies });
-      });
-  }, [setAppState]);
+const CompanyDashboard = (props) => {
+  const companyData = props.companyData;
 
   return (
     <div className="content">
@@ -29,8 +14,8 @@ const CompanyDashboard = () => {
           <div className="col-md-4">
             <div className="card ">
               <GetCompany
-                isLoading={appState.loading}
-                companies={appState.companies}
+                isLoading={companyData.loading}
+                companies={companyData.companies}
               />
             </div>
           </div>
