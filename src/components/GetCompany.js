@@ -39,6 +39,7 @@ const GetCompany = (props) => {
         <div className="card-body ">
           <Select
             options={listOfCompanies}
+            placeholder="Auswählen..."
             value={selectedCompany}
             onChange={(opt) => updateSelectedCompany(opt.value)}
           />
